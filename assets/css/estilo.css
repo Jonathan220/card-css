@@ -1,3 +1,12 @@
+:root {
+  --green: rgb(6, 143, 6);
+  --pink: rgb(255, 7, 110);
+  --orange: rgb(250, 148, 14);
+  --darkgreen: rgb(6, 100, 6);
+  --darkpink: rgb(172, 26, 87);
+  --darkorange: rgb(211, 122, 6);
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -27,14 +36,28 @@ body {
 
   transition: 0.5s ease;
   cursor: pointer;
+  margin: 20px;
 }
 
 .card-image {
   grid-area: image;
-  background: url("../images/img01.jpg");
-  background-size: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
+}
+
+.image-01 {
+  background: url("../images/img01.jpg");
+  background-size: cover;
+}
+
+.image-02 {
+  background: url("../images/img02.jpg");
+  background-size: cover;
+}
+
+.image-03 {
+  background: url("../images/img03.jpg");
+  background-size: cover;
 }
 
 .card-text {
@@ -43,8 +66,19 @@ body {
 }
 
 .card-text .date {
-  color: rgb(255, 7, 110);
   font-size: 13px;
+}
+
+.cor-date-01 {
+  color: var(--green);
+}
+
+.cor-date-02 {
+  color: var(--pink);
+}
+
+.cor-date-03 {
+  color: var(--orange);
 }
 
 .card-text p {
@@ -65,7 +99,18 @@ body {
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: rgb(255, 7, 110);
+}
+
+.status-color-01 {
+  background-color: var(--green);
+}
+
+.status-color-02 {
+  background-color: var(--pink);
+}
+
+.status-color-03 {
+  background-color: var(--orange);
 }
 
 .card-status .stat {
@@ -88,9 +133,19 @@ body {
   font-weight: 500;
 }
 
-.card-status .border {
-  border-left: 1px solid rgb(172, 26, 87);
-  border-right: 1px solid rgb(172, 26, 87);
+.card-status .border-01 {
+  border-left: 1px solid var(--darkgreen);
+  border-right: 1px solid var(--darkgreen);
+}
+
+.card-status .border-02 {
+  border-left: 1px solid var(--darkpink);
+  border-right: 1px solid var(--darkpink);
+}
+
+.card-status .border-03 {
+  border-left: 1px solid var(--darkorange);
+  border-right: 1px solid var(--darkorange);
 }
 
 .card-status .value sup {
@@ -98,6 +153,6 @@ body {
 }
 
 .card:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
